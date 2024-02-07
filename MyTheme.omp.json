@@ -107,20 +107,29 @@
       "alignment": "right",
       "segments": [
         {
-          "background": "#03DED3",
-          "background_templates": [
+          "background": "#303030",
+          "foreground": "#3C873A",
+          "leading_diamond": " \ue0b6",
+          "properties": {
+            "fetch_package_manager": true,
+            "npm_icon": " <#cc3a3a>\ue5fa</> ",
+            "yarn_icon": " <#348cba>\ue6a7</>"
+          },
+          "style": "diamond",
+          "template": "\ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "trailing_diamond": "\ue0b4",
+          "type": "node"
+        }, 
+        {
+          "foreground": "#689f38",
+          "foreground_templates": [
             "{{ if gt .Code 0 }}#E44141{{ end }}"
           ],
-          "foreground": "#414141",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}#D6DEEB{{ end }}"
-          ],
-          "leading_diamond": "\ue0b6",
           "properties": {
             "always_enabled": true
           },
           "style": "diamond",
-          "template": " {{ if gt .Code 0 }}\uf00d {{ else }}\uf00c {{ end }} ",
+          "template": " {{ if gt .Code 0 }}\uf00d{{ else }}\uf00c{{ end }}  ",
           "type": "status"
         },
         {
@@ -131,7 +140,8 @@
             "threshold": 0
           },
           "style": "diamond",
-          "template": " \uf252 {{ .FormattedMs }} ",
+          "template": "\uf252 {{ .FormattedMs }}",
+          "leading_diamond": "\ue0b6",
           "trailing_diamond": "\ue0b4",
           "type": "executiontime"
         }
