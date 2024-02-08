@@ -8,7 +8,6 @@
         {
           "background": "#0077c2",
           "foreground": "#FFFFFF",
-          "leading_diamond": "\ue0b2",
           "properties": {
             "alpine": "\uf300",
             "arch": "\uf303",
@@ -121,6 +120,7 @@
           "type": "node"
         }, 
         {
+          "background": "#b2bec3",
           "foreground": "#689f38",
           "foreground_templates": [
             "{{ if gt .Code 0 }}#E44141{{ end }}"
@@ -128,21 +128,22 @@
           "properties": {
             "always_enabled": true
           },
-          "style": "diamond",
-          "template": " {{ if gt .Code 0 }}\uf00d{{ else }}\uf00c{{ end }}  ",
+          "powerline_symbol": "\ue0b2",
+          "invert_powerline": true,
+          "style": "powerline",
+          "template": "{{ if gt .Code 0 }}\uf00d{{ else }}\uf00c{{ end }} ",
           "type": "status"
         },
         {
           "background": "#575656",
           "foreground": "#D6DEEB",
+          "invert_powerline": true,
           "properties": {
             "style": "roundrock",
             "threshold": 0
           },
           "style": "diamond",
-          "template": "\uf252 {{ .FormattedMs }}",
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4",
+          "template": " \uf252 {{ .FormattedMs }} ",
           "type": "executiontime"
         }
       ],
