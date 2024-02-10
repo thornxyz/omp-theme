@@ -106,20 +106,6 @@
       "alignment": "right",
       "segments": [
         {
-          "background": "#303030",
-          "foreground": "#3C873A",
-          "leading_diamond": " \ue0b6",
-          "properties": {
-            "fetch_package_manager": true,
-            "npm_icon": " <#cc3a3a>\ue5fa</> ",
-            "yarn_icon": " <#348cba>\ue6a7</>"
-          },
-          "style": "diamond",
-          "template": "\ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
-          "trailing_diamond": "\ue0b4",
-          "type": "node"
-        }, 
-        {
           "background": "#b2bec3",
           "foreground": "#689f38",
           "foreground_templates": [
@@ -135,6 +121,21 @@
           "type": "status"
         },
         {
+          "background": "#303030",
+          "foreground": "#3C873A",
+          "properties": {
+            "fetch_package_manager": true,
+            "npm_icon": " <#cc3a3a>\ue5fa</> ",
+            "yarn_icon": " <#348cba>\ue6a7</>"
+          },
+          "powerline_symbol": "\ue0b2",
+          "invert_powerline": true,
+          "style": "powerline",
+          "template": "\ue718{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "trailing_diamond": "\ue0b4",
+          "type": "node"
+        }, 
+        {
           "background": "#575656",
           "foreground": "#D6DEEB",
           "invert_powerline": true,
@@ -143,7 +144,7 @@
             "threshold": 0
           },
           "style": "diamond",
-          "template": " \uf252 {{ .FormattedMs }} ",
+          "template": "\uf252 {{ .FormattedMs }} ",
           "type": "executiontime"
         }
       ],
